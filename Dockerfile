@@ -5,5 +5,3 @@ WORKDIR /app
 
 ADD . .
 RUN make all && make install
-
-ENTRYPOINT ./cccc.sh

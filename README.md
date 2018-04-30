@@ -3,8 +3,8 @@
 ### Usage
 ```bash
 $ docker run \
-    -e "FILENAME=/app/cccc/cccc.h" \
     -e "HOST_UID=${UID}" \
-    -v "$(pwd):/app/repo" --rm strangeducttape/cccc
+    -v "$(pwd):/app/repo" \
+    --rm strangeducttape/cccc "./cccc.sh /app/root/some.cpp"
 ```
 Creates `cccc.xml` in current dir

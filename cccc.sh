@@ -2,9 +2,10 @@
 
 set -e
 
+INPUT_FILES="$@"
+
 XML_OUTPUT="/app/repo/cccc.xml"
 
-: ${FILENAME:?"FILENAME has to be set"}
 : ${HOST_UID:?"HOST_UID has to be set"}
 
 fix_permissions() {
@@ -14,4 +15,4 @@ fix_permissions() {
 }
 trap fix_permissions INT TERM EXIT
 
-cccc ${FILENAME} --xml_outfile=${XML_OUTPUT}
+cccc ${INPUT_FILES} --xml_outfile=${XML_OUTPUT}
