@@ -5,3 +5,5 @@ WORKDIR /app
 
 ADD . .
 RUN make all && make install
+
+CMD ./cccc.sh
